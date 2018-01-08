@@ -105,7 +105,7 @@ class Portfolio extends Component {
     return (
       <div>
         <div className="card text-center">
-          <div className="card-header">Portfolio</div>
+          <div className="card-header">Your Portfolio</div>
           <div className="card-block">
             <table className="table table-striped table-dark">
               <thead>
@@ -127,11 +127,13 @@ class Portfolio extends Component {
                     <tr key={key++} style={{textAlign: "left"}}>
                       <td>{symbol}</td>
                       <td>{mergedTransactionsQuantity[symbol]}</td>
-                      <td>$ {mergedTransactionsValue[symbol]}</td>
+                      <td>$ {Math.trunc(mergedTransactionsValue[symbol])}</td>
                       <td>
-                        {mergedTransactionsValue[symbol] -
-                          mergedTransactionsQuantity[symbol] *
-                            mergedStocks[symbol]}
+                        {Math.trunc(
+                          mergedTransactionsValue[symbol] -
+                            mergedTransactionsQuantity[symbol] *
+                              mergedStocks[symbol]
+                        )}
                       </td>
                       <td>$ {mergedStocks[symbol]}</td>
                       <td>{mergedStocks1Day[symbol]}</td>

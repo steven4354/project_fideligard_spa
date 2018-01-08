@@ -44,15 +44,7 @@ class App extends Component {
                     path="/portfolio"
                     component={PortfolioContainer}
                   />
-                  <Route
-                    exact
-                    path="/"
-                    render={() => (
-                      <div style={{color: "blue"}}>
-                        Click on a stock to trade
-                      </div>
-                    )}
-                  />
+                  <Route exact path="/" component={PortfolioContainer} />
                   <Route
                     exact
                     path="/transactions"
