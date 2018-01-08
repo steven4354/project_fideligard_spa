@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import logo from "../logo.svg";
+// import logo from "../logo.svg";
 import "./App.css";
 
 //custom containers
@@ -13,7 +13,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import {
   BrowserRouter as Router,
   Route,
-  NavLink,
   Switch
 } from "react-router-dom";
 
@@ -24,20 +23,19 @@ class App extends Component {
         <div>
           <nav
             className="navbar navbar-light bg-faded"
-            style={{marginBottom: "40px"}}
           >
             <h1>
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="/">
                 FidelGuard Stock Portfolio Simulator
               </a>{" "}
             </h1>
           </nav>
           <div className="App container-fluid">
             <div className="row">
-              <div className="col-xl-4">
+              <div className="col-xl-4" style={{marginTop: "40px"}}>
                 <StockDataContainer />
               </div>
-              <div className="col-xl-8">
+              <div className="col-xl-8" style={{marginTop: "40px"}}>
                 <Switch>
                   <Route exact path="/trade" component={TradeContainer} />
                   <Route exact path="/portfolio" component={TradeContainer} />
