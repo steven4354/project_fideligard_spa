@@ -30,11 +30,10 @@ class Transactions extends Component {
               <tbody>
                 {transactions.map(transaction => {
                   return (
-                    <tr>
+                    <tr style={{textAlign: "left"}}>
                       <td>{transaction.date}</td>
                       <td>{transaction.symbol}</td>
-
-                      <td>{transaction.type}</td>
+                      <td>{transaction.transaction}</td>
                       <td>{transaction.quantity}</td>
                       <td>{transaction.price}</td>
                     </tr>

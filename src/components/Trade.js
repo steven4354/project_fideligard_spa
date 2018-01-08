@@ -129,16 +129,15 @@ class Trade extends Component {
                     >
                       Price
                     </label>
-                    <div
-                      className="col-10"
-                      id="price"
-                      style={{
-                        textAlign: "left",
-                        marginTop: "6px",
-                        color: "red"
-                      }}
-                    >
-                      $ {currentStockPrice}
+                    <div className="col-10">
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="price"
+                        defaultValue={currentStockPrice}
+                        id="example-text-input"
+                        style={{width: "500px"}}
+                      />
                     </div>
                   </div>
                   <div className="form-group row">

@@ -41,7 +41,7 @@ class List extends Component {
               <tbody>
                 {stocks.map(stock => {
                   return (
-                    <tr key={key++}>
+                    <tr key={key++} style={{textAlign: "left"}}>
                       <td>{stock.name}</td>
                       <td>${Math.floor(stock.dates[0].closing, 10)}</td>
                       <td>
