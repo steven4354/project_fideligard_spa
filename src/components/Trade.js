@@ -7,56 +7,80 @@ import "bootstrap/dist/css/bootstrap.css";
 class Trade extends Component {
   constructor(props) {
     super();
-    console.log('trade props =>', props)
+    this.state = {
+      quanity: 0
+    };
+    this.setTotal = this.setTotal.bind(this);
+  }
+
+  //if the quantity input changes, change the state
+  //so that the total can be calculated
+  setTotal(e) {
+    if (e.target.id === "quantity") {
+      console.log("e.target.value for quantity =>", e.target.value);
+      this.setState({
+        quantity: e.target.value
+      });
+    }
   }
 
   componentDidMount() {}
   render() {
-    const {onSubmit} = this.props;
-    console.log("onSubmit =>", onSubmit);
     console.log("trade props => ", this.props);
+    const {onSubmit} = this.props;
+
+    //grabbing some stuff from the state that the link gave me
+    const currentStockPrice = this.props.location.state.stock.dates[0].closing;
+    const currentStockSymbol = this.props.location.state.stock.name;
+    const currentStockDate = this.props.location.state.stock.dates[0].date;
+
+    console.log("currentStockPrice =>", currentStockPrice);
+    console.log("currentStockDate =>", currentStockDate);
+    console.log("currentStockSymbol =>", currentStockSymbol);
 
     return (
       <div>
-        <div class="card text-center">
-          <div class="card-header">Trade</div>
-          <div class="card-block">
+        <div className="card text-center">
+          <div className="card-header">Trade</div>
+          <div className="card-block">
             {" "}
-            <div class="row">
-              <div class="col-xl-6 offset-xl-2">
+            <div className="row">
+              <div className="col-xl-6 offset-xl-2">
                 <form
+                  id="trade-form"
+                  onChange={this.setTotal}
                   onSubmit={onSubmit}
                   className="form-group"
                   style={{marginTop: "10px", marginLeft: "30px"}}
                 >
-                  <div class="form-group row">
+                  <div className="form-group row">
                     <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
+                      htmlFor="example-text-input"
+                      className="col-2 col-form-label"
                     >
                       Symbol
                     </label>
-                    <div class="col-10">
+                    <div className="col-10">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         name="symbol"
-                        placeholder="AAPL"
+                        defaultValue={currentStockSymbol}
                         id="example-text-input"
                         style={{width: "500px"}}
                       />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div className="form-group row">
                     <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
+                      htmlFor="example-text-input"
+                      className="col-2 col-form-label"
                     >
                       Buy/Sell
                     </label>
-                    <div class="col-10">
+                    <div className="col-10">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         name="transaction"
                         placeholder="Enter buy or sell"
@@ -65,62 +89,75 @@ class Trade extends Component {
                       />
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
-                    >
+                  <div className="form-group row">
+                    <label htmlFor="quantity" className="col-2 col-form-label">
                       Quantity
                     </label>
-                    <div class="col-10">
+                    <div className="col-10">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         name="quantity"
                         placeholder="Enter quantity"
-                        id="example-text-input"
+                        id="quantity"
                         style={{width: "500px"}}
                       />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div className="form-group row">
                     <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
+                      htmlFor="example-text-input"
+                      className="col-2 col-form-label"
                     >
                       Date
                     </label>
-                    <div class="col-10">
+                    <div className="col-10">
                       <input
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         name="date"
-                        placeholder="01-25-1998"
+                        defaultValue={currentStockDate}
                         id="example-text-input"
                         style={{width: "500px"}}
                       />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div className="form-group row">
                     <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
+                      htmlFor="example-text-input"
+                      className="col-2 col-form-label"
                     >
                       Price
                     </label>
-                    <div class="col-10" style={{textAlign: "left"}}>
-                      $100
+                    <div
+                      className="col-10"
+                      id="price"
+                      style={{
+                        textAlign: "left",
+                        marginTop: "6px",
+                        color: "red"
+                      }}
+                    >
+                      $ {currentStockPrice}
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div className="form-group row">
                     <label
-                      for="example-text-input"
-                      class="col-2 col-form-label"
+                      htmlFor="example-text-input"
+                      className="col-2 col-form-label"
                     >
-                      Price
+                      Total
                     </label>
-                    <div class="col-10" style={{textAlign: "left"}}>
-                      $100
+                    <div
+                      className="col-10"
+                      style={{textAlign: "left"}}
+                      style={{
+                        textAlign: "left",
+                        marginTop: "6px",
+                        color: "blue"
+                      }}
+                    >
+                      $ {Number(this.state.quantity) * currentStockPrice}
                     </div>
                   </div>
                   <input
@@ -132,7 +169,9 @@ class Trade extends Component {
               </div>
             </div>
           </div>
-          <div class="card-footer text-muted">Data pulled from Quandl API</div>
+          <div className="card-footer text-muted">
+            Data pulled from Quandl API
+          </div>
         </div>
       </div>
     );

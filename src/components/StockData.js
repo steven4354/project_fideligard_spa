@@ -2,8 +2,7 @@
 import React, {Component} from "react";
 
 //getting some Links to use
-import { BrowserRouter, Route, Link } from 'react-router-dom'
-
+import {Link} from "react-router-dom";
 
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
@@ -14,12 +13,13 @@ class List extends Component {
   }
 
   componentDidMount() {
-    const {getInitialStocks, stocks, isFetching} = this.props;
+    const {getInitialStocks} = this.props;
 
     getInitialStocks();
   }
   render() {
-    const {getInitialStocks, stocks, isFetching} = this.props;
+    const {stocks} = this.props;
+    let key = 0;
 
     console.log("stocks =>", stocks);
     return (
@@ -41,7 +41,7 @@ class List extends Component {
               <tbody>
                 {stocks.map(stock => {
                   return (
-                    <tr>
+                    <tr key={key++}>
                       <td>{stock.name}</td>
                       <td>${Math.floor(stock.dates[0].closing, 10)}</td>
                       <td>
@@ -62,7 +62,10 @@ class List extends Component {
                         ) / 10}
                       </td>
                       <td>
-                        <Link to={{pathname: '/trade', state: {stock}}} > trade </Link>
+                        <Link to={{pathname: "/trade", state: {stock}}}>
+                          {" "}
+                          trade{" "}
+                        </Link>
                       </td>
                     </tr>
                   );

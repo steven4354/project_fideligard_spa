@@ -16,7 +16,7 @@ import thunk from "redux-thunk";
 import {stocksApp} from "./reducers";
 
 //importing an action
-import {getInitialStocks} from "./actions";
+// import {getInitialStocks} from "./actions";
 
 let store = createStore(stocksApp, applyMiddleware(thunk, logger));
 

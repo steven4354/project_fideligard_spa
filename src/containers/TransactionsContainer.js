@@ -2,12 +2,10 @@ import React, {Component} from "react";
 
 //connecting to the store
 import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+// import {bindActionCreators} from "redux";
 
 //our component
 import Transactions from "../components/Transactions";
-
-
 
 class TransactionsContainer extends Component {
   constructor(props) {
@@ -15,7 +13,7 @@ class TransactionsContainer extends Component {
   }
 
   render() {
-    return <Transactions transactions = {this.props.transactions} />;
+    return <Transactions transactions={this.props.transactions} />;
   }
 }
 
@@ -26,8 +24,6 @@ const mapStateToProps = state => {
     // isFetching: state.initialStocksReducer.
   };
 };
-
-
 
 //connecting to the store
 export default connect(mapStateToProps, null)(TransactionsContainer);

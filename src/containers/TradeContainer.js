@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+// import React, {Component} from "react";
 
 //connecting to the store
 import {connect} from "react-redux";
@@ -17,9 +17,7 @@ const mapDispatchToProps = dispatch => {
       const form = e.target;
       const data = serialize(form, {hash: true});
       console.log("form data =>", data);
-      // dispatch(
-      //   newTransaction(data.symbol)
-      // );
+      dispatch(newTransaction(data.symbol));
       form.reset();
     }
   };
