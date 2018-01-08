@@ -30,6 +30,7 @@ const mapDispatchToProps = dispatch => {
 
         //go back to previous
         form.reset();
+        window.location.assign("/transactions");
       } else {
         alert("incorrect input");
       }
