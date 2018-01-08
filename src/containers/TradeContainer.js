@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => {
       const data = serialize(form, {hash: true});
       console.log("form data =>", data);
       // dispatch(
-      //   newTransaction(data)
+      //   newTransaction(data.symbol)
       // );
       form.reset();
     }

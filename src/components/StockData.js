@@ -1,6 +1,10 @@
 // reg component
 import React, {Component} from "react";
 
+//getting some Links to use
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+
+
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -21,7 +25,7 @@ class List extends Component {
     return (
       <div>
         <div className="card text-center">
-          <div className="card-header">Stocks</div>
+          <div className="card-header">Stocks Data</div>
           <div className="card-block">
             <table className="table table-striped table-dark">
               <thead>
@@ -58,7 +62,7 @@ class List extends Component {
                         ) / 10}
                       </td>
                       <td>
-                        <a href="#"> trade </a>
+                        <Link to={{pathname: '/trade', state: {stock}}} > trade </Link>
                       </td>
                     </tr>
                   );

@@ -26,7 +26,8 @@ class StockDataContainer extends Component {
   }
 }
 
-//getting the store state to container's props
+//getting the store state to containers props
+
 const mapStateToProps = state => {
   return {
     stocks: state.initialStocksReducer.stocks,

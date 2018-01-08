@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 class Trade extends Component {
   constructor(props) {
     super();
+    console.log('trade props =>', props)
   }
 
   componentDidMount() {}
@@ -22,7 +23,7 @@ class Trade extends Component {
           <div class="card-block">
             {" "}
             <div class="row">
-              <div class="col-xl-6">
+              <div class="col-xl-6 offset-xl-2">
                 <form
                   onSubmit={onSubmit}
                   className="form-group"
@@ -57,8 +58,8 @@ class Trade extends Component {
                       <input
                         class="form-control"
                         type="text"
-                        name="symbol"
-                        placeholder="AAPL"
+                        name="transaction"
+                        placeholder="Enter buy or sell"
                         id="example-text-input"
                         style={{width: "500px"}}
                       />
@@ -75,8 +76,8 @@ class Trade extends Component {
                       <input
                         class="form-control"
                         type="text"
-                        name="symbol"
-                        placeholder="AAPL"
+                        name="quantity"
+                        placeholder="Enter quantity"
                         id="example-text-input"
                         style={{width: "500px"}}
                       />
@@ -93,8 +94,8 @@ class Trade extends Component {
                       <input
                         class="form-control"
                         type="text"
-                        name="symbol"
-                        placeholder="AAPL"
+                        name="date"
+                        placeholder="01-25-1998"
                         id="example-text-input"
                         style={{width: "500px"}}
                       />
