@@ -20,6 +20,10 @@ class App extends Component {
           <nav className="navbar navbar-light bg-faded">
             <h1>
               <a className="navbar-brand" href="/">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Stratton_Oakmont_logo.svg/1200px-Stratton_Oakmont_logo.svg.png"
+                  style={{height: "50px", width: "50px", marginRight: "10px"}}
+                />{" "}
                 FidelGuard Stock Portfolio Simulator
               </a>{" "}
             </h1>
