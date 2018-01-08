@@ -11,11 +11,7 @@ import {Provider} from "react-redux";
 //custom middleware
 import logger from "redux-logger";
 import thunk from "redux-thunk";
-import {
-  persistReducer,
-  persistStore,
-  persistCombineReducers
-} from "redux-persist"; //for keeping store on refresh
+import {persistReducer, persistStore} from "redux-persist"; //for keeping store on refresh
 import storage from "redux-persist/es/storage"; //for keeping store on refresh
 
 //importing our store

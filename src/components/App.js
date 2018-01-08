@@ -6,6 +6,8 @@ import "./App.css";
 import StockDataContainer from "../containers/StockDataContainer";
 import TradeContainer from "../containers/TradeContainer";
 import TransactionsContainer from "../containers/TransactionsContainer";
+import PortfolioContainer from "../containers/PortfolioContainer";
+
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -23,6 +25,7 @@ class App extends Component {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Stratton_Oakmont_logo.svg/1200px-Stratton_Oakmont_logo.svg.png"
                   style={{height: "50px", width: "50px", marginRight: "10px"}}
+                  alt="lion"
                 />{" "}
                 FidelGuard Stock Portfolio Simulator
               </a>{" "}
@@ -36,7 +39,11 @@ class App extends Component {
               <div className="col-xl-8" style={{marginTop: "40px"}}>
                 <Switch>
                   <Route exact path="/trade" component={TradeContainer} />
-                  <Route exact path="/portfolio" component={TradeContainer} />
+                  <Route
+                    exact
+                    path="/portfolio"
+                    component={PortfolioContainer}
+                  />
                   <Route
                     exact
                     path="/"

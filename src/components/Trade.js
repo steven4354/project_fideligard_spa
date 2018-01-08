@@ -149,7 +149,6 @@ class Trade extends Component {
                     </label>
                     <div
                       className="col-10"
-                      style={{textAlign: "left"}}
                       style={{
                         textAlign: "left",
                         marginTop: "6px",
@@ -161,7 +160,7 @@ class Trade extends Component {
                   </div>
                   <input
                     type="submit"
-                    className="btn btn-success"
+                    className="btn-primary"
                     style={{marginLeft: "60px"}}
                   />
                 </form>
