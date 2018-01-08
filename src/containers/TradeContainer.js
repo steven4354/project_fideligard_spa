@@ -23,10 +23,12 @@ const mapDispatchToProps = dispatch => {
       if (
         data.symbol &&
         Number(data.quantity) !== NaN &&
-        data.transaction === ("buy" || "sell")
+        data.transaction == ("buy" || "sell")
       ) {
         console.log("form data correct => ", "true");
         dispatch(newTransaction(data));
+
+        //go back to previous
         form.reset();
       } else {
         alert("incorrect input");

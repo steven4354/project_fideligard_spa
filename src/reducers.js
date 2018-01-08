@@ -58,6 +58,9 @@ export function stockTransactionsReducer(
 ) {
   switch (action.type) {
     case Actions.NEW_TRANSACTION:
+      //error with transactions -> logging to find what
+      //transactions looks like
+      //state.transactions is currently a number
       console.log(
         "action.data in the stockTransactionsReducer =>",
         action.data
@@ -70,7 +73,7 @@ export function stockTransactionsReducer(
 
       return {
         ...state,
-        transactions: state.transactions.push(action.data)
+        transactions: [...state.transactions, action.data]
       };
     default:
       return state;
