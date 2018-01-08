@@ -5,25 +5,19 @@ import "./App.css";
 //custom containers
 import StockDataContainer from "../containers/StockDataContainer";
 import TradeContainer from "../containers/TradeContainer";
-import TransactionsContainer from "../containers/TransactionsContainer"
+import TransactionsContainer from "../containers/TransactionsContainer";
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 
 //for the router
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch
-} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <nav
-            className="navbar navbar-light bg-faded"
-          >
+          <nav className="navbar navbar-light bg-faded">
             <h1>
               <a className="navbar-brand" href="/">
                 FidelGuard Stock Portfolio Simulator
@@ -39,8 +33,20 @@ class App extends Component {
                 <Switch>
                   <Route exact path="/trade" component={TradeContainer} />
                   <Route exact path="/portfolio" component={TradeContainer} />
-                  <Route exact path="/" component={TradeContainer} />
-                  <Route exact path="/transactions" component={TransactionsContainer} />
+                  <Route
+                    exact
+                    path="/"
+                    render={() => (
+                      <div style={{color: "blue"}}>
+                        Click on a stock to trade
+                      </div>
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/transactions"
+                    component={TransactionsContainer}
+                  />
                 </Switch>
               </div>
             </div>

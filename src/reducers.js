@@ -58,9 +58,19 @@ export function stockTransactionsReducer(
 ) {
   switch (action.type) {
     case Actions.NEW_TRANSACTION:
+      console.log(
+        "action.data in the stockTransactionsReducer =>",
+        action.data
+      );
+
+      console.log(
+        "state.transactions in the stockTransactionsReducer =>",
+        state.transactions
+      );
+
       return {
         ...state,
-        transactions: state.transactions.map().push(action.data)
+        transactions: state.transactions.push(action.data)
       };
     default:
       return state;

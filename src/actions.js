@@ -32,7 +32,6 @@ export function getFailure(error) {
   };
 }
 
-
 //action to get 30 stocks and info
 export function getInitialStocks() {
   //some initial setup for variables in the fetch call
@@ -54,10 +53,11 @@ export function getInitialStocks() {
 //-------------------------------
 
 export function newTransaction(data) {
+  console.log("data in the newTransaction action =>", data);
   return {
     type: NEW_TRANSACTION,
     data
-  }
+  };
 }
 
 /*const baseUrl = "https://www.quandl.com/api/v3/datasets/EOD/";

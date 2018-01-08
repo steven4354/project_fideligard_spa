@@ -17,8 +17,20 @@ const mapDispatchToProps = dispatch => {
       const form = e.target;
       const data = serialize(form, {hash: true});
       console.log("form data =>", data);
-      dispatch(newTransaction(data.symbol));
-      form.reset();
+
+      //checks to make sure data is submited correctly before
+      //using the submission data for action dispatch
+      if (
+        data.symbol &&
+        Number(data.quantity) !== NaN &&
+        data.transaction === ("buy" || "sell")
+      ) {
+        console.log("form data correct => ", "true");
+        dispatch(newTransaction(data));
+        form.reset();
+      } else {
+        alert("incorrect input");
+      }
     }
   };
 };
