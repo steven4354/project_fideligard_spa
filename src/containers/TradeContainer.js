@@ -10,7 +10,7 @@ import {newTransaction} from "../actions";
 //for using forms
 import serialize from "form-serialize";
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onSubmit: e => {
       e.preventDefault();
@@ -30,7 +30,8 @@ const mapDispatchToProps = dispatch => {
 
         //go back to previous
         form.reset();
-        window.location.assign("/transactions");
+        // window.location.assign("/transactions");
+        ownProps.history.push("/transactions"); //replaces ^^
       } else {
         alert("incorrect input");
       }

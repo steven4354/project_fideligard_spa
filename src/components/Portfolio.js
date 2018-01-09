@@ -6,6 +6,9 @@ import {Link} from "react-router-dom";
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 
+//custom component
+import Chart from "./Chart";
+
 class Portfolio extends Component {
   constructor(props) {
     super();
@@ -102,6 +105,7 @@ class Portfolio extends Component {
     //unique key error
     let key = 0;
 
+    //finally what the component looks like
     return (
       <div>
         <div className="card text-center">
@@ -165,6 +169,12 @@ class Portfolio extends Component {
             </table>
           </div>
           <div className="card-footer text-muted">2 days ago</div>
+        </div>
+        <div className="card text-center" style={{marginTop: "10px"}}>
+          <div className="card-header">How big are your holdings?</div>
+          <div className="card-block">
+            <Chart />
+          </div>
         </div>
       </div>
     );

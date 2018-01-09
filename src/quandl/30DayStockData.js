@@ -1,5 +1,31 @@
 const data = [
   {
+    name: "DDD",
+    dates: [
+      {date: "2018-01-04", closing: 296.67},
+      {date: "2018-01-03", closing: 297.8},
+      {date: "2018-01-02", closing: 296.84},
+      {date: "2017-12-29", closing: 294.91},
+      {date: "2017-12-28", closing: 296.35},
+      {date: "2017-12-27", closing: 295.62},
+      {date: "2017-12-26", closing: 295.36},
+      {date: "2017-12-22", closing: 295.1},
+      {date: "2017-12-21", closing: 295.03},
+      {date: "2017-12-20", closing: 297.9},
+      {date: "2017-12-19", closing: 297.25},
+      {date: "2017-12-18", closing: 296.14},
+      {date: "2017-12-15", closing: 293.94},
+      {date: "2017-12-14", closing: 293.88},
+      {date: "2017-12-13", closing: 291.84},
+      {date: "2017-12-12", closing: 289.94},
+      {date: "2017-12-11", closing: 283.16},
+      {date: "2017-12-08", closing: 285.9},
+      {date: "2017-12-07", closing: 281.97},
+      {date: "2017-12-06", closing: 278.27}
+    ]
+  },
+
+  {
     name: "MSFT",
     dates: [
       {date: "2018-01-04", closing: 87.11},
@@ -50,6 +76,109 @@ const data = [
       {date: "2017-12-06", closing: 169.01}
     ]
   },
+  {
+    name: "ALI",
+    dates: [
+      {date: "2018-01-04", closing: 296.67},
+      {date: "2018-01-03", closing: 297.8},
+      {date: "2018-01-02", closing: 296.84},
+      {date: "2017-12-29", closing: 294.91},
+      {date: "2017-12-28", closing: 296.35},
+      {date: "2017-12-27", closing: 295.62},
+      {date: "2017-12-26", closing: 295.36},
+      {date: "2017-12-22", closing: 295.1},
+      {date: "2017-12-21", closing: 295.03},
+      {date: "2017-12-20", closing: 297.9},
+      {date: "2017-12-19", closing: 297.25},
+      {date: "2017-12-18", closing: 296.14},
+      {date: "2017-12-15", closing: 293.94},
+      {date: "2017-12-14", closing: 293.88},
+      {date: "2017-12-13", closing: 291.84},
+      {date: "2017-12-12", closing: 289.94},
+      {date: "2017-12-11", closing: 283.16},
+      {date: "2017-12-08", closing: 285.9},
+      {date: "2017-12-07", closing: 281.97},
+      {date: "2017-12-06", closing: 278.27}
+    ]
+  },
+
+  {
+    name: "BBA",
+    dates: [
+      {date: "2018-01-04", closing: 296.67},
+      {date: "2018-01-03", closing: 297.8},
+      {date: "2018-01-02", closing: 296.84},
+      {date: "2017-12-29", closing: 294.91},
+      {date: "2017-12-28", closing: 296.35},
+      {date: "2017-12-27", closing: 295.62},
+      {date: "2017-12-26", closing: 295.36},
+      {date: "2017-12-22", closing: 295.1},
+      {date: "2017-12-21", closing: 295.03},
+      {date: "2017-12-20", closing: 297.9},
+      {date: "2017-12-19", closing: 297.25},
+      {date: "2017-12-18", closing: 296.14},
+      {date: "2017-12-15", closing: 293.94},
+      {date: "2017-12-14", closing: 293.88},
+      {date: "2017-12-13", closing: 291.84},
+      {date: "2017-12-12", closing: 289.94},
+      {date: "2017-12-11", closing: 283.16},
+      {date: "2017-12-08", closing: 285.9},
+      {date: "2017-12-07", closing: 281.97},
+      {date: "2017-12-06", closing: 278.27}
+    ]
+  },
+
+  {
+    name: "QND",
+    dates: [
+      {date: "2018-01-04", closing: 296.67},
+      {date: "2018-01-03", closing: 297.8},
+      {date: "2018-01-02", closing: 296.84},
+      {date: "2017-12-29", closing: 294.91},
+      {date: "2017-12-28", closing: 296.35},
+      {date: "2017-12-27", closing: 295.62},
+      {date: "2017-12-26", closing: 295.36},
+      {date: "2017-12-22", closing: 295.1},
+      {date: "2017-12-21", closing: 295.03},
+      {date: "2017-12-20", closing: 297.9},
+      {date: "2017-12-19", closing: 297.25},
+      {date: "2017-12-18", closing: 296.14},
+      {date: "2017-12-15", closing: 293.94},
+      {date: "2017-12-14", closing: 293.88},
+      {date: "2017-12-13", closing: 291.84},
+      {date: "2017-12-12", closing: 289.94},
+      {date: "2017-12-11", closing: 283.16},
+      {date: "2017-12-08", closing: 285.9},
+      {date: "2017-12-07", closing: 281.97},
+      {date: "2017-12-06", closing: 278.27}
+    ]
+  },
+
+  {
+    name: "BBVA",
+    dates: [
+      {date: "2018-01-04", closing: 87.11},
+      {date: "2018-01-03", closing: 86.35},
+      {date: "2018-01-02", closing: 85.95},
+      {date: "2017-12-29", closing: 85.54},
+      {date: "2017-12-28", closing: 85.72},
+      {date: "2017-12-27", closing: 85.71},
+      {date: "2017-12-26", closing: 85.4},
+      {date: "2017-12-22", closing: 85.51},
+      {date: "2017-12-21", closing: 85.5},
+      {date: "2017-12-20", closing: 85.52},
+      {date: "2017-12-19", closing: 85.83},
+      {date: "2017-12-18", closing: 86.38},
+      {date: "2017-12-15", closing: 86.85},
+      {date: "2017-12-14", closing: 84.69},
+      {date: "2017-12-13", closing: 85.35},
+      {date: "2017-12-12", closing: 85.58},
+      {date: "2017-12-11", closing: 85.23},
+      {date: "2017-12-08", closing: 84.16},
+      {date: "2017-12-07", closing: 82.49},
+      {date: "2017-12-06", closing: 82.78}
+    ]
+  },
 
   {
     name: "IBM",
@@ -78,6 +207,32 @@ const data = [
   },
 
   {
+    name: "QED",
+    dates: [
+      {date: "2018-01-04", closing: 87.11},
+      {date: "2018-01-03", closing: 86.35},
+      {date: "2018-01-02", closing: 85.95},
+      {date: "2017-12-29", closing: 85.54},
+      {date: "2017-12-28", closing: 85.72},
+      {date: "2017-12-27", closing: 85.71},
+      {date: "2017-12-26", closing: 85.4},
+      {date: "2017-12-22", closing: 85.51},
+      {date: "2017-12-21", closing: 85.5},
+      {date: "2017-12-20", closing: 85.52},
+      {date: "2017-12-19", closing: 85.83},
+      {date: "2017-12-18", closing: 86.38},
+      {date: "2017-12-15", closing: 86.85},
+      {date: "2017-12-14", closing: 84.69},
+      {date: "2017-12-13", closing: 85.35},
+      {date: "2017-12-12", closing: 85.58},
+      {date: "2017-12-11", closing: 85.23},
+      {date: "2017-12-08", closing: 84.16},
+      {date: "2017-12-07", closing: 82.49},
+      {date: "2017-12-06", closing: 82.78}
+    ]
+  },
+
+  {
     name: "INTC",
     dates: [
       {date: "2018-01-04", closing: 44.43},
@@ -100,6 +255,32 @@ const data = [
       {date: "2017-12-08", closing: 43.35},
       {date: "2017-12-07", closing: 43.08},
       {date: "2017-12-06", closing: 43.45}
+    ]
+  },
+
+  {
+    name: "TEDX",
+    dates: [
+      {date: "2018-01-04", closing: 87.11},
+      {date: "2018-01-03", closing: 86.35},
+      {date: "2018-01-02", closing: 85.95},
+      {date: "2017-12-29", closing: 85.54},
+      {date: "2017-12-28", closing: 85.72},
+      {date: "2017-12-27", closing: 85.71},
+      {date: "2017-12-26", closing: 85.4},
+      {date: "2017-12-22", closing: 85.51},
+      {date: "2017-12-21", closing: 85.5},
+      {date: "2017-12-20", closing: 85.52},
+      {date: "2017-12-19", closing: 85.83},
+      {date: "2017-12-18", closing: 86.38},
+      {date: "2017-12-15", closing: 86.85},
+      {date: "2017-12-14", closing: 84.69},
+      {date: "2017-12-13", closing: 85.35},
+      {date: "2017-12-12", closing: 85.58},
+      {date: "2017-12-11", closing: 85.23},
+      {date: "2017-12-08", closing: 84.16},
+      {date: "2017-12-07", closing: 82.49},
+      {date: "2017-12-06", closing: 82.78}
     ]
   },
 

@@ -7,6 +7,7 @@ import StockDataContainer from "../containers/StockDataContainer";
 import TradeContainer from "../containers/TradeContainer";
 import TransactionsContainer from "../containers/TransactionsContainer";
 import PortfolioContainer from "../containers/PortfolioContainer";
+import Chart from "./Chart";
 
 //adding some bootstrap
 import "bootstrap/dist/css/bootstrap.css";
@@ -50,6 +51,7 @@ class App extends Component {
                     path="/transactions"
                     component={TransactionsContainer}
                   />
+                  <Route exact path="/chart" component={Chart} />
                 </Switch>
               </div>
             </div>
