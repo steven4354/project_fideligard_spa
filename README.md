@@ -1,6 +1,6 @@
 ## Demo
 
-![Alt Text](http://g.recordit.co/j0FmEA5APS.gif)
+![Alt Text](http://g.recordit.co/iEPKDc8gdd.gif)
 
 ## Running on local machine 
 
