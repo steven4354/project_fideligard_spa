@@ -2,6 +2,8 @@
 
 ![Alt Text](http://g.recordit.co/iEPKDc8gdd.gif)
 
+![Alt Text](https://http://g.recordit.co/iEPKDc8gdd.gif)
+
 ## Running on local machine 
 
 1. Install node package manage (npm) https://docs.npmjs.com/getting-started/installing-node
