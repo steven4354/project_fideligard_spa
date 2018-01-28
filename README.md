@@ -2,7 +2,13 @@
 
 ![Alt Text](http://g.recordit.co/iEPKDc8gdd.gif)
 
-![Alt text](./demo_1.png?raw=true "Title")
+![Alt text](./demo_1.png?raw=true "Demo 1")
+
+![Alt text](./demo_2.png?raw=true "Demo 2")
+
+![Alt text](./demo_3.png?raw=true "Demo 3")
+
+![Alt text](./demo_4.png?raw=true "Demo 4")
 
 ## Running on local machine 
 
