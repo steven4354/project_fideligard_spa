@@ -34,10 +34,10 @@ class App extends Component {
           </nav>
           <div className="App container-fluid">
             <div className="row">
-              <div className="col-xl-4" style={{marginTop: "40px"}}>
+              <div className="col-xl-4" style={{marginTop: "20px"}}>
                 <StockDataContainer />
               </div>
-              <div className="col-xl-8" style={{marginTop: "40px"}}>
+              <div className="col-xl-8" style={{marginTop: "20px"}}>
                 <Switch>
                   <Route exact path="/trade" component={TradeContainer} />
                   <Route

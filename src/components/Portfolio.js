@@ -175,6 +175,9 @@ class Portfolio extends Component {
           <div className="card-block">
             <Chart />
           </div>
+          <div className="card-footer text-muted">
+            Showing Your Top 3 Holdings
+          </div>
         </div>
       </div>
     );
